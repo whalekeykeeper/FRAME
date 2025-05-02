@@ -34,3 +34,4 @@ static/
 data/
 default_database_data/
 test_database_data/
+/backend/app/resources
