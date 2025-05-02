@@ -1,0 +1,97 @@
+[tool.poetry]
+authors = ["admin <admin@example.com>"]
+description = "FastAPI project generated using minimal-fastapi-postgres-template."
+name = "watch-backend"
+version = "0.1.0-alpha"
+package-mode = false
+
+[tool.poetry.dependencies]
+fastapi = "^0.109.0"
+pyjwt = { extras = ["crypto"], version = "^2.6.0" }
+python = ">=3.10,<3.13"
+python-multipart = ">=0.0.5,<0.0.6"
+sqlalchemy = "^2.0.1"
+alembic = "^1.9.2"
+asyncpg = "^0.27.0"
+passlib = { extras = ["bcrypt"], version = "^1.7.4" }
+pydantic = { extras = ["dotenv", "email"], version = "^2.3" }
+pydantic-settings = "^2.0.3"
+pytube = "^15.0.0"
+yt-dlp = "^2024.12.23"
+youtube-transcript-api = "^0.6.3"
+srt = "^3.5.3"
+webvtt-py = "^0.5.1"
+nltk = "^3.8.1"
+vtt-to-srt3 = "^0.2.0.1"
+openai = "^0.28.1"
+google-cloud = "^0.34.0"
+google-generativeai = "^0.8.3"
+python-dotenv = "^1.0.1"
+pandas = "^2.2.3"
+openpyxl = "^3.1.5"
+networkx = "^3.4.2"
+en_core_web_lg = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0.tar.gz" }
+zh-core-web-lg = { url = "https://github.com/explosion/spacy-models/releases/download/zh_core_web_lg-3.8.0/zh_core_web_lg-3.8.0-py3-none-any.whl" }
+spacy = "^3.8.3"
+word-forms = "^2.1.0"
+pydictionary = "^2.0.1"
+isort = "^5.13.2"
+docker = "^7.1.0"
+simalign = "^0.4"
+awesome-align = "^0.1.7"
+torch = "^2.5.1"
+transformers = "^4.47.1"
+einops = "^0.8.0"
+directory-tree = "^1.0.0"
+beautifulsoup4 = "^4.12.3"
+bs4 = "^0.0.2"
+selenium = "^4.27.1"
+chromedriver = "^2.24.1"
+colorama = "^0.4.6"
+cloc = "^0.2.5"
+wordcloud = "^1.9.4"
+matplotlib = "^3.10.0"
+psycopg2-binary = "^2.9.10"
+gunicorn = "^21.2.0"
+jieba = "^0.42.1"
+
+[tool.poetry.group.dev.dependencies]
+autoflake = "^2.0.1"
+black = "^23.1.0"
+coverage = "^7.1.0"
+flake8 = "^6.0.0"
+httpx = "^0.23.3"
+isort = "^5.12.0"
+pytest = "^7.2.1"
+pytest-asyncio = "^0.20.3"
+uvicorn = { extras = ["standard"], version = "^0.20.0" }
+pre-commit = "^3.0.4"
+setuptools = "^75.1.0"
+pytest-mock = "^3.14.0"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
+
+[tool.pytest.ini_options]
+addopts = "-v"
+asyncio_mode = "auto"
+filterwarnings = [
+    # Passlib 1.7.4 depends on crypt - https://foss.heptapod.net/python-libs/passlib/-/issues/148
+    "ignore:'crypt' is deprecated and slated for removal"
+]
+markers = ["pytest.mark.asyncio"]
+minversion = "6.0"
+pythonpath = [
+    "."
+]
+testpaths = [
+    "tests"
+]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.black]
+line-length = 88
