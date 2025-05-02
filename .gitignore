@@ -1,0 +1,36 @@
+# IDEs
+.idea/
+.vscode/
+.DS_Store
+
+
+# Bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual env & environment
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Logs and cache
+*.log
+log.txt
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+
+# NLP resources
+app/resources/glove.840B.300d.txt
+app/core/utils/toDel.py
+
+# Static output
+static/
+
+# DB volumes
+data/
+default_database_data/
+test_database_data/
